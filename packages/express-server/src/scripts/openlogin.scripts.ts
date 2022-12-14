@@ -23,7 +23,7 @@ export const OpenloginScript = async (i: number, appurl: string) => {
   let authTime: string, regTime: string, tkeyTime: string;
   if (!timingsMap[email]) timingsMap[email] = {};
 
-  const eventType = "register";
+  let eventType = "register";
 
   page.on("console", (cnsl: any) => {
     const text = cnsl.text();
@@ -52,6 +52,7 @@ export const OpenloginScript = async (i: number, appurl: string) => {
   await page.click(".log-out-cta");
   await page.waitForSelector(".login-with-openlogin");
 
+  eventType = "login";
   // log back in.
   await page.type(".openlogin-input-text", email);
   await page.click(".login-with-openlogin");
