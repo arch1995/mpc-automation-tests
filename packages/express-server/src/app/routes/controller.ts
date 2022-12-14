@@ -48,6 +48,8 @@ router.post("/test-login/:type", async (req: Request, res: Response, _next: Next
     if (result) timingMap[result.email] = result.timings;
   }
 
+  console.log("----result---", JSON.stringify(timingMap));
+
   const formattedData = format(timingMap);
 
   await axios.post("https://f32c1d7f54459a992ecd30792af0425d.m.pipedream.net", formattedData);
