@@ -27,7 +27,7 @@ router.get("/health", (_req, res) => {
 router.use(
   "/test-login/:type",
   basicAuth({
-    users: { admin: process.env.BASIC_AUTH_PASSWORD || "testing" },
+    users: { admin: process.env.BASIC_AUTH_PASSWORD ? process.env.BASIC_AUTH_PASSWORD : "testing" },
   })
 );
 router.post("/test-login/:type", async (req: Request, res: Response, _next: NextFunction) => {

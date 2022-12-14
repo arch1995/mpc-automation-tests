@@ -1,9 +1,6 @@
-import * as dotenv from "dotenv"; //
 import express, { Express } from "express";
 
 import router from "./app/routes/controller";
-
-dotenv.config({ path: ".env" });
 
 const app: Express = express();
 
