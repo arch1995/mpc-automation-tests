@@ -8,21 +8,7 @@ import { extractTime } from "../utils/helper";
 export const OpenloginScript = async (i: number, appurl: string) => {
   const timingsMap: Record<string, Record<string, Record<string, string | undefined>>> = {};
   console.log(`iteration index: ${i}`);
-  const browser = await puppeteer.launch({
-    pipe: true,
-    headless: true,
-    dumpio: true,
-    args: [
-      "--disable-dev-shm-usage",
-      "--disable-setuid-sandbox",
-      "--no-sandbox",
-      "--no-zygote",
-      "--disable-gpu",
-      "--disable-audio-output",
-      "--headless",
-      "--single-process",
-    ],
-  });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto(appurl);
   console.log("page loaded");
