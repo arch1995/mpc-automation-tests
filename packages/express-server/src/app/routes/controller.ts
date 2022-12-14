@@ -11,7 +11,7 @@ const format = (data: any): any[] => {
   const result: { email: string; registrationTime: string | null; loginTime: string | null }[] = [];
   Object.keys(data).forEach((key: string) => {
     const obj = { email: key, registrationTime: null, loginTime: null };
-    obj.registrationTime = data[key].registration.auth;
+    obj.registrationTime = data[key].register.auth;
     obj.loginTime = data[key].login.auth;
     // obj["auth_time"] = data[key].registration.auth;
     // obj["tkey_time"] = data[key].registration.tkey;
