@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@types/puppeteer": "^7.0.4",
+    "@toruslabs/openlogin": "^2.10.0",
     "@web3auth-mpc/base": "^2.1.9",
     "@web3auth-mpc/openlogin-adapter": "^2.1.22",
     "@web3auth-mpc/web3auth": "^2.1.22",

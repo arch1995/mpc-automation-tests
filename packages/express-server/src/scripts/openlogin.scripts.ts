@@ -5,12 +5,37 @@ import puppeteer from "puppeteer";
 
 import { extractTime } from "../utils/helper";
 
-export const OpenloginScript = async (i: number, appurl: string) => {
+export const OpenloginScript = async ({
+  i,
+  appurl,
+  network = "mainnet",
+  networkThrottle,
+}: {
+  i: number;
+  appurl: string;
+  network?: string;
+  networkThrottle?: { up: number; down: number; latency: number };
+}): Promise<any> => {
   const timingsMap: Record<string, Record<string, Record<string, string | undefined>>> = {};
   console.log(`iteration index: ${i}`);
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.goto(appurl);
+
+  page.setDefaultTimeout(90 * 1000);
+
+  if (networkThrottle) {
+    // Connect to Chrome DevTools
+    const client = await page.target().createCDPSession();
+
+    // Set throttling property
+    await client.send("Network.emulateNetworkConditions", {
+      offline: false,
+      downloadThroughput: (networkThrottle.up * 1024 * 1024) / 8,
+      uploadThroughput: (networkThrottle.down * 1024 * 1024) / 8,
+      latency: networkThrottle.latency,
+    });
+  }
+  await page.goto(`${appurl}/?network=${network}`);
   console.log("page loaded");
 
   await page.waitForSelector(".login-with-openlogin");
@@ -59,5 +84,5 @@ export const OpenloginScript = async (i: number, appurl: string) => {
   await page.waitForSelector(".logged-in-state");
 
   await browser.close();
-  return { email, timings: timingsMap[email] };
+  return { type: "current", email, timings: timingsMap[email] };
 };

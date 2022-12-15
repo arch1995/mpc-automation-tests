@@ -1,12 +1,10 @@
+import { OPENLOGIN_NETWORK_TYPE } from "@toruslabs/openlogin";
 import { ADAPTER_EVENTS, CHAIN_NAMESPACES, SafeEventEmitterProvider, WALLET_ADAPTERS } from "@web3auth/base";
 import { Web3AuthCore } from "@web3auth/core";
 import { OpenloginAdapter } from "@web3auth/openlogin-adapter";
 import { useEffect, useState } from "react";
 
-// import { Auth } from "aws-amplify";
-// import { useState } from "react";
 import { generateIdToken } from "../../helper/utils";
-// import { useWeb3Auth } from "../services/web3auth";
 
 function Openlogin() {
   const [web3AuthInstance, setWeb3AuthInstance] = useState<Web3AuthCore | null>(null);
@@ -48,9 +46,11 @@ function Openlogin() {
         },
         clientId: "BGf4o9kWm4o6LE69EbwcezpxoimRO1ac5x8i-wnQKvFzL_IMFQji6rm0gBJJRyujk6uvmC4hw1PFbLIJtabsgO0",
       });
+      const url = new URL(window.location.href);
+      const qNetwork = url.searchParams.get("network");
       const adapter = new OpenloginAdapter({
         adapterSettings: {
-          network: "testnet",
+          network: (qNetwork as OPENLOGIN_NETWORK_TYPE) ?? "mainnet",
           uxMode: "redirect",
           loginConfig: {
             jwt: {
