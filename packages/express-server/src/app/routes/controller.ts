@@ -26,7 +26,7 @@ router.get("/health", (_req, res) => {
 });
 
 router.use(
-  "/test-login/:type",
+  ["/test-login/:type", "/return-mpc-connected-geo"],
   basicAuth({
     users: { admin: process.env.BASIC_AUTH_PASSWORD ? process.env.BASIC_AUTH_PASSWORD : "testing" },
   })
