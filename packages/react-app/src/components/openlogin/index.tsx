@@ -44,7 +44,7 @@ function Openlogin() {
           ticker: "ETH",
           tickerName: "Ethereum",
         },
-        clientId: "BGf4o9kWm4o6LE69EbwcezpxoimRO1ac5x8i-wnQKvFzL_IMFQji6rm0gBJJRyujk6uvmC4hw1PFbLIJtabsgO0",
+        clientId: "BArfH9uaj2FI8qAjJY0gv98x8Li9RT6bLroh2abbLl5iVKDQu5BxNLVh8TgepA3p7MBTByhZL0ypJe1Citw4Hjs",
       });
       const url = new URL(window.location.href);
       const qNetwork = url.searchParams.get("network");
@@ -78,7 +78,6 @@ function Openlogin() {
       console.error("web3auth not initialized, please wait....");
       return;
     }
-
     const localProvider = await web3AuthInstance.connectTo(WALLET_ADAPTERS.OPENLOGIN, {
       loginProvider: "jwt",
       extraLoginOptions: {

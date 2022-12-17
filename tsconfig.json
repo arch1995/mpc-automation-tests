@@ -23,4 +23,5 @@
   "include": [
     "packages/**/src",
   ],
+  "exclude": ["ecosystem.config.js"],
 }

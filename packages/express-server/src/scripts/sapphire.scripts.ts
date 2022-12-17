@@ -44,8 +44,8 @@ export const SapphireScript = async ({
   // register the user with a new account.
   await page.type(".openlogin-input-text", email);
   await page.click(".login-with-openlogin");
+  const startTime = Date.now();
 
-  let authTime: string, regTime: string, tkeyTime: string;
   if (!timingsMap[email]) timingsMap[email] = {};
 
   let eventType = "register";
@@ -56,22 +56,34 @@ export const SapphireScript = async ({
     if (text.includes("time taken")) {
       if (!timingsMap[email][eventType]) timingsMap[email][eventType] = {};
       if (text.includes("@auth")) {
-        authTime = extractTime(text);
-        console.log("authentication time taken: ", authTime);
-        timingsMap[email][eventType].auth = authTime;
+        const time = extractTime(text);
+        console.log("authentication time taken: ", time);
+        timingsMap[email][eventType].auth = time;
       } else if (text.includes("@user_registeration")) {
-        regTime = extractTime(text);
-        console.log("user registration time taken: ", regTime);
-        timingsMap[email][eventType].register = regTime;
+        const time = extractTime(text);
+        console.log("user registration time taken: ", time);
+        timingsMap[email][eventType].register = time;
       } else if (text.includes("@check_if_tkey_exist")) {
-        tkeyTime = extractTime(text);
-        console.log("tkey time taken: ", tkeyTime);
-        timingsMap[email][eventType].tkeyTime = tkeyTime;
+        const time = extractTime(text);
+        console.log("tkey time taken: ", time);
+        timingsMap[email][eventType].tkeyTime = time;
+      } else if (text.includes("@set_preferences")) {
+        const time = extractTime(text);
+        console.log("setPreferences time taken: ", time);
+        timingsMap[email][eventType].setPreferencesTime = time;
+      } else if (text.includes("@totalLoginTime")) {
+        const time = extractTime(text);
+        console.log("total login time taken: ", time);
+        timingsMap[email][eventType].totalLogin = time;
       }
     }
   });
 
   await page.waitForSelector(".logged-in-state");
+
+  console.log("registration timer over", Date.now() - startTime);
+  // eslint-disable-next-line require-atomic-updates
+  timingsMap[email][eventType].totalLogin = (Date.now() - startTime).toString();
 
   // log out the user.
   await page.click(".log-out-cta");
@@ -81,8 +93,11 @@ export const SapphireScript = async ({
   // log back in.
   await page.type(".openlogin-input-text", email);
   await page.click(".login-with-openlogin");
+  const loginTime = Date.now();
   await page.waitForSelector(".logged-in-state");
-
+  console.log("login timer over", Date.now() - loginTime);
+  // eslint-disable-next-line require-atomic-updates
+  timingsMap[email][eventType].totalLogin = (Date.now() - loginTime).toString();
   await browser.close();
   return { type: "saphire", email, timings: timingsMap[email] };
 };

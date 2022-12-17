@@ -11,11 +11,17 @@ const router = express.Router();
 const format = (data: any): any[] => {
   const result: { email: string; registrationTime: string | null; loginTime: string | null }[] = [];
   Object.keys(data).forEach((key: string) => {
-    const obj = { email: key, registrationTime: null, loginTime: null };
+    const obj: any = { email: key };
     obj.registrationTime = data[key].register.auth;
     obj.loginTime = data[key].login.auth;
-    // obj["auth_time"] = data[key].registration.auth;
-    // obj["tkey_time"] = data[key].registration.tkey;
+    obj.r_reg_time = data[key].register.register;
+    obj.r_tkey_time = data[key].register.tkeyTime;
+    obj.r_sp_time = data[key].register.setPreferencesTime;
+    obj.r_total_time = data[key].register.totalLogin;
+    obj.log_auth_time = data[key].login.register;
+    obj.log_tkey_time = data[key].login.tkeyTime;
+    obj.log_sp_time = data[key].login.setPreferencesTime;
+    obj.log_total_time = data[key].login.totalLogin;
     result.push(obj);
   });
 
@@ -100,6 +106,7 @@ router.get("/return-mpc-connected-geo", async (req: Request, res: Response) => {
       }
       return res.status(200).json({ ip, city });
     }
+    return res.status(201).json("Didnt find anything");
   } catch (err: any) {
     console.log(err);
     return res.status(500).send(err ? err.message : "something went wrong");
