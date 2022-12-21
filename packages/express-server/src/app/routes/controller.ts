@@ -81,7 +81,7 @@ router.post("/test-login/:type", async (req: Request, res: Response, _next: Next
   }
 
   await axios.post(
-    `https://f32c1d7f54459a992ecd30792af0425d.m.pipedream.net?network=${network}&up=${up}&down=${down}&latency=${latency}`,
+    `https://385988892adf6447ed3bfaae2a948010.m.pipedream.net?network=${network}&up=${up}&down=${down}&latency=${latency}`,
     formattedData
   );
 });
