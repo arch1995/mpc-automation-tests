@@ -41,7 +41,7 @@ router.use(
 router.post("/test-login/:type", async (req: Request, res: Response, _next: NextFunction) => {
   const queryParams = req.query;
   const { type } = req.params;
-  const { count, network, up, down, latency } = queryParams;
+  const { count, network, up, down, latency, postURL } = queryParams;
   let scripts = [];
   if (type === "all") {
     scripts = [OpenloginScript, SapphireScript];
@@ -80,10 +80,9 @@ router.post("/test-login/:type", async (req: Request, res: Response, _next: Next
     if (result) formattedData[result.type] = format(timingMap);
   }
 
-  await axios.post(
-    `https://385988892adf6447ed3bfaae2a948010.m.pipedream.net?network=${network}&up=${up}&down=${down}&latency=${latency}`,
-    formattedData
-  );
+  const eventPostURL = postURL ?? "https://385988892adf6447ed3bfaae2a948010.m.pipedream.net";
+
+  await axios.post(`${eventPostURL}?network=${network}&up=${up}&down=${down}&latency=${latency}`, formattedData);
 });
 
 router.get("/return-mpc-connected-geo", async (req: Request, res: Response) => {

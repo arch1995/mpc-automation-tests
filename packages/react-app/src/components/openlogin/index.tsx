@@ -35,6 +35,12 @@ function Openlogin() {
 
     const initializeWeb3Auth = async () => {
       setIsLoading(true);
+      const url = new URL(window.location.href);
+      const qNetwork = url.searchParams.get("network");
+      const clientId =
+        qNetwork === "cyan"
+          ? "BILxiaDYbvlcwNdeJsyXEUDieKdYPIHfSdvEabzidwYZ3zaGsEN6noiM5u8f-5wuIksJcOn-Ga1LWNqen1eUZbw"
+          : "BArfH9uaj2FI8qAjJY0gv98x8Li9RT6bLroh2abbLl5iVKDQu5BxNLVh8TgepA3p7MBTByhZL0ypJe1Citw4Hjs";
       const web3auth = new Web3AuthCore({
         chainConfig: {
           displayName: "Ethereum Mainnet",
@@ -44,10 +50,9 @@ function Openlogin() {
           ticker: "ETH",
           tickerName: "Ethereum",
         },
-        clientId: "BArfH9uaj2FI8qAjJY0gv98x8Li9RT6bLroh2abbLl5iVKDQu5BxNLVh8TgepA3p7MBTByhZL0ypJe1Citw4Hjs",
+        clientId,
       });
-      const url = new URL(window.location.href);
-      const qNetwork = url.searchParams.get("network");
+
       const adapter = new OpenloginAdapter({
         adapterSettings: {
           network: (qNetwork as OPENLOGIN_NETWORK_TYPE) ?? "mainnet",

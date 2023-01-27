@@ -62,7 +62,7 @@ function OpenloginMPC() {
               clientId: "torus-key-test",
             },
           },
-          _iframeUrl: "https://mpc-beta.openlogin.com",
+          _iframeUrl: "https://mci-beta.openlogin.com",
         },
       });
       subscribeAuthEvents(web3auth);
