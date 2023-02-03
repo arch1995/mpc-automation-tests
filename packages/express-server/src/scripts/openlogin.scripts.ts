@@ -85,6 +85,13 @@ export const OpenloginScript = async ({
   await page.waitForSelector(".login-with-openlogin");
 
   eventType = "login";
+
+  // WE need to do this because we loose the network context here.
+  // so we need to revisit the page again so that we can go to the correct network.
+  await page.goto(`${appurl}/?network=${network}`);
+  console.log("page loaded");
+  await page.waitForSelector(".login-with-openlogin");
+
   // log back in.
   await page.type(".openlogin-input-text", email);
   const loginTime = Date.now();

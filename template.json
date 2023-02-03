@@ -1,0 +1,918 @@
+{
+    "Template": {
+        "TemplateName": "Web3AuthPasswordlessEmail",
+        "SubjectPart": "Verify your email",
+        "HtmlPart": "`<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+        <html
+          data-editor-version='2'
+          class='sg-campaigns'
+          xmlns='http://www.w3.org/1999/xhtml'
+        >
+          <head>
+            <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+            <meta
+              name='viewport'
+              content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1'
+            />
+            <!--[if !mso]><!-->
+            <meta http-equiv='X-UA-Compatible' content='IE=Edge' />
+            <!--<![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+              <xml>
+                <o:OfficeDocumentSettings>
+                  <o:AllowPNG />
+                  <o:PixelsPerInch>96</o:PixelsPerInch>
+                </o:OfficeDocumentSettings>
+              </xml>
+            <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+              <style type='text/css'>
+                body {
+                  width: 600px;
+                  margin: 0 auto;
+                }
+                table {
+                  border-collapse: collapse;
+                }
+                table,
+                td {
+                  mso-table-lspace: 0pt;
+                  mso-table-rspace: 0pt;
+                }
+                img {
+                  -ms-interpolation-mode: bicubic;
+                }
+              </style>
+            <![endif]-->
+            <style type='text/css'>
+              body,
+              p,
+              div {
+                font-family: arial, helvetica, sans-serif;
+                font-size: 14px;
+              }
+              body {
+                color: #000000;
+              }
+              body a {
+                color: #006be8;
+                text-decoration: none;
+              }
+              p {
+                margin: 0;
+                padding: 0;
+              }
+              table.wrapper {
+                width: 100% !important;
+                table-layout: fixed;
+                -webkit-font-smoothing: antialiased;
+                -webkit-text-size-adjust: 100%;
+                -moz-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+              }
+              img.max-width {
+                max-width: 100% !important;
+              }
+              .column.of-2 {
+                width: 50%;
+              }
+              .column.of-3 {
+                width: 33.333%;
+              }
+              .column.of-4 {
+                width: 25%;
+              }
+              ul ul ul ul {
+                list-style-type: disc !important;
+              }
+              ol ol {
+                list-style-type: lower-roman !important;
+              }
+              ol ol ol {
+                list-style-type: lower-latin !important;
+              }
+              ol ol ol ol {
+                list-style-type: decimal !important;
+              }
+              @media screen and (max-width: 480px) {
+                .preheader .rightColumnContent,
+                .footer .rightColumnContent {
+                  text-align: left !important;
+                }
+                .preheader .rightColumnContent div,
+                .preheader .rightColumnContent span,
+                .footer .rightColumnContent div,
+                .footer .rightColumnContent span {
+                  text-align: left !important;
+                }
+                .preheader .rightColumnContent,
+                .preheader .leftColumnContent {
+                  font-size: 80% !important;
+                  padding: 5px 0;
+                }
+                table.wrapper-mobile {
+                  width: 100% !important;
+                  table-layout: fixed;
+                }
+                img.max-width {
+                  height: auto !important;
+                  max-width: 100% !important;
+                }
+                a.bulletproof-button {
+                  display: block !important;
+                  width: auto !important;
+                  font-size: 80%;
+                  padding-left: 0 !important;
+                  padding-right: 0 !important;
+                }
+                .columns {
+                  width: 100% !important;
+                }
+                .column {
+                  display: block !important;
+                  width: 100% !important;
+                  padding-left: 0 !important;
+                  padding-right: 0 !important;
+                  margin-left: 0 !important;
+                  margin-right: 0 !important;
+                }
+                .social-icon-column {
+                  display: inline-block !important;
+                }
+              }
+            </style>
+            <style>
+              @media screen and (max-width: 480px) {
+                table\0 {
+                  width: 480px !important;
+                }
+              }
+            </style>
+            <!--user entered Head Start-->
+            <style>
+              .report-section,
+              .footer-section,
+              .divider-section {
+                padding: 0px 24px;
+              }
+        
+              .footer-section {
+                padding-top: 15px;
+              }
+        
+              @media (min-width: 600px) {
+                .report-section,
+                .footer-section,
+                .divider-section {
+                  padding: 0px 50px;
+                }
+              }
+            </style>
+            <!--End Head user entered-->
+          </head>
+          <body>
+            <center
+              class='wrapper'
+              data-link-color='#006BE8'
+              data-body-style='font-size:14px; font-family:arial,helvetica,sans-serif; color:#000000; background-color:#e7edf3;'
+            >
+              <div class='webkit'>
+                <table
+                  cellpadding='0'
+                  cellspacing='0'
+                  border='0'
+                  width='100%'
+                  class='wrapper'
+                  bgcolor='#e7edf3'
+                >
+                  <tr>
+                    <td valign='top' bgcolor='#e7edf3' width='100%'>
+                      <table
+                        width='100%'
+                        role='content-container'
+                        class='outer'
+                        align='center'
+                        cellpadding='0'
+                        cellspacing='0'
+                        border='0'
+                      >
+                        <tr>
+                          <td width='100%'>
+                            <table
+                              width='100%'
+                              cellpadding='0'
+                              cellspacing='0'
+                              border='0'
+                            >
+                              <tr>
+                                <td>
+                                  <!--[if mso]>
+            <center>
+            <table><tr><td width='600'>
+          <![endif]-->
+                                  <table
+                                    width='100%'
+                                    cellpadding='0'
+                                    cellspacing='0'
+                                    border='0'
+                                    style='width: 100%; max-width: 600px'
+                                    align='center'
+                                  >
+                                    <tr>
+                                      <td
+                                        role='modules-container'
+                                        style='
+                                          padding: 0px 0px 0px 0px;
+                                          color: #000000;
+                                          text-align: left;
+                                        '
+                                        bgcolor='#ffffff'
+                                        width='100%'
+                                        align='left'
+                                      >
+                                        <table
+                                          class='module preheader preheader-hide'
+                                          role='module'
+                                          data-type='preheader'
+                                          border='0'
+                                          cellpadding='0'
+                                          cellspacing='0'
+                                          width='100%'
+                                          style='
+                                            display: none !important;
+                                            mso-hide: all;
+                                            visibility: hidden;
+                                            opacity: 0;
+                                            color: transparent;
+                                            height: 0;
+                                            width: 0;
+                                          '
+                                        >
+                                          <tr>
+                                            <td role='module-content'>
+                                              <p></p>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                        <table
+                                          class='module'
+                                          role='module'
+                                          data-type='divider'
+                                          border='0'
+                                          cellpadding='0'
+                                          cellspacing='0'
+                                          width='100%'
+                                          style='table-layout: fixed'
+                                          data-muid='ixz3BTmo4ueARwSzKcmNuh.1'
+                                        >
+                                          <tbody>
+                                            <tr>
+                                              <td
+                                                style='padding: 0px 0px 0px 0px'
+                                                role='module-content'
+                                                height='100%'
+                                                valign='top'
+                                                bgcolor='#E7EDF3'
+                                              >
+                                                <table
+                                                  border='0'
+                                                  cellpadding='0'
+                                                  cellspacing='0'
+                                                  align='center'
+                                                  width='100%'
+                                                  height='20px'
+                                                  style='
+                                                    line-height: 20px;
+                                                    font-size: 20px;
+                                                  '
+                                                >
+                                                  <tbody>
+                                                    <tr>
+                                                      <td
+                                                        style='
+                                                          padding: 0px 0px 20px 0px;
+                                                        '
+                                                        bgcolor='#e7edf3'
+                                                      ></td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <table
+                                          class='module'
+                                          role='module'
+                                          data-type='divider'
+                                          border='0'
+                                          cellpadding='0'
+                                          cellspacing='0'
+                                          width='100%'
+                                          style='table-layout: fixed'
+                                          data-muid='0fbfb7ee-9aed-4a32-a7dc-865a75a72004.1'
+                                        >
+                                          <tbody>
+                                            <tr>
+                                              <td
+                                                style='padding: 0px 0px 0px 0px'
+                                                role='module-content'
+                                                height='100%'
+                                                valign='top'
+                                                bgcolor=''
+                                              >
+                                                <table
+                                                  border='0'
+                                                  cellpadding='0'
+                                                  cellspacing='0'
+                                                  align='center'
+                                                  width='100%'
+                                                  height='60px'
+                                                  style='
+                                                    line-height: 60px;
+                                                    font-size: 60px;
+                                                  '
+                                                >
+                                                  <tbody>
+                                                    <tr>
+                                                      <td
+                                                        style='
+                                                          padding: 0px 0px 60px 0px;
+                                                        '
+                                                        bgcolor='#ffffff'
+                                                      ></td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <table
+                                          class='wrapper'
+                                          role='module'
+                                          data-type='image'
+                                          border='0'
+                                          cellpadding='0'
+                                          cellspacing='0'
+                                          width='100%'
+                                          style='table-layout: fixed'
+                                          data-muid='21baea38-6948-4b35-9ca6-7952e4d8b23e'
+                                        >
+                                          <tbody>
+                                            <tr>
+                                              <td
+                                                style='
+                                                  font-size: 6px;
+                                                  line-height: 10px;
+                                                  padding: 0px 0px 0px 0px;
+                                                '
+                                                valign='top'
+                                                align='center'
+                                              >
+                                                <img
+                                                  class='max-width'
+                                                  border='0'
+                                                  style='
+                                                    display: block;
+                                                    color: #000000;
+                                                    text-decoration: none;
+                                                    font-family: Helvetica, arial,
+                                                      sans-serif;
+                                                    font-size: 16px;
+                                                    max-width: 50% !important;
+                                                    width: 50%;
+                                                    height: auto !important;
+                                                  '
+                                                  width='300'
+                                                  alt='dapp-logo'
+                                                  data-proportionally-constrained='true'
+                                                  data-responsive='true'
+                                                  src='{{ logo }} '
+                                                />
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <table
+                                          class='module'
+                                          role='module'
+                                          data-type='text'
+                                          border='0'
+                                          cellpadding='0'
+                                          cellspacing='0'
+                                          width='100%'
+                                          style='table-layout: fixed'
+                                          data-muid='db90e582-1298-4857-bee1-768bede99507'
+                                          data-mc-module-version='2019-10-22'
+                                        >
+                                          <tbody>
+                                            <tr>
+                                              <td
+                                                style='
+                                                  padding: 16px 0px 0px 0px;
+                                                  line-height: 22px;
+                                                  text-align: inherit;
+                                                '
+                                                height='100%'
+                                                valign='top'
+                                                bgcolor=''
+                                                role='module-content'
+                                              >
+                                                <div>
+                                                  <div
+                                                    style='
+                                                      font-family: inherit;
+                                                      text-align: center;
+                                                      margin-top: 48px;
+                                                    '
+                                                  >
+                                                    <span
+                                                      style='
+                                                        font-size: 24px;
+                                                        color: #000000;
+                                                        font-family: helvetica,
+                                                          sans-serif;
+                                                        line-height: 36px;
+                                                        font-weight: 600;
+                                                      '
+                                                      ><strong
+                                                        >Verify your email
+                                                        address</strong
+                                                      ></span
+                                                    >
+                                                  </div>
+                                                  <div></div>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <table
+                                          class='module'
+                                          role='module'
+                                          data-type='code'
+                                          border='0'
+                                          cellpadding='0'
+                                          cellspacing='0'
+                                          width='100%'
+                                          style='table-layout: fixed'
+                                          data-muid='db90e582-1298-4857-bee1-768bede99507.1'
+                                        >
+                                          <tbody>
+                                            <tr>
+                                              <td
+                                                height='100%'
+                                                valign='top'
+                                                role='module-content'
+                                              >
+                                                <div
+                                                  style='
+                                                    font-family: inherit;
+                                                    text-align: center;
+                                                    margin-top: 8px;
+                                                  '
+                                                >
+                                                  <span
+                                                    style='
+                                                      font-size: 16px;
+                                                      color: #000;
+                                                      font-family: helvetica, sans-serif;
+                                                      line-height: 24px;
+                                                    '
+                                                    >Click the button below to login in
+                                                    securely.</span
+                                                  >
+                                                </div>
+                                                <div
+                                                  style='
+                                                    font-family: inherit;
+                                                    text-align: center;
+                                                    margin-bottom: 24px;
+                                                  '
+                                                >
+                                                  <span
+                                                    style='
+                                                      font-size: 16px;
+                                                      color: #000;
+                                                      font-family: arial, helvetica,
+                                                        sans-serif;
+                                                      line-height: 24px;
+                                                    '
+                                                    >This verification link will expire
+                                                    in 5 minutes.</span
+                                                  >
+                                                </div>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <table
+                                          border='0'
+                                          cellpadding='0'
+                                          cellspacing='0'
+                                          class='module'
+                                          data-role='module-button'
+                                          data-type='button'
+                                          role='module'
+                                          style='table-layout: fixed'
+                                          width='100%'
+                                          data-muid='7f52dba0-5c24-44c8-8746-a73bac41f0e9'
+                                        >
+                                          <tbody>
+                                            <tr>
+                                              <td
+                                                align='center'
+                                                bgcolor=''
+                                                class='outer-td'
+                                                style='padding: 0px 0px 0px 0px'
+                                              >
+                                                <table
+                                                  border='0'
+                                                  cellpadding='0'
+                                                  cellspacing='0'
+                                                  class='wrapper-mobile'
+                                                  style='text-align: center'
+                                                >
+                                                  <tbody>
+                                                    <tr>
+                                                      <td
+                                                        align='center'
+                                                        bgcolor='{{ primaryColor }}'
+                                                        class='inner-td'
+                                                        style='
+                                                          border-radius: 6px;
+                                                          font-size: 16px;
+                                                          text-align: center;
+                                                          background-color: inherit;
+                                                        '
+                                                      >
+                                                        <a
+                                                          href='{{ magicLink }}'
+                                                          clicktracking='off'
+                                                          style='background-color:{{ primaryColor }}; border:1px solid {{ primaryColor }}; border-color:{{ primaryColor }}; border-radius:24px; border-width:1px; color:#ffffff; display:inline-block; font-size:16px; font-weight:normal; letter-spacing:0px; line-height:normal; padding:12px 48px 12px 48px; text-align:center; text-decoration:none; border-style:solid; font-family:helvetica,sans-serif; margin-bottom:28px;'
+                                                          target='_blank'
+                                                          >Verify my email</a
+                                                        >
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <table
+                                          class='module'
+                                          role='module'
+                                          data-type='code'
+                                          border='0'
+                                          cellpadding='0'
+                                          cellspacing='0'
+                                          width='100%'
+                                          style='table-layout: fixed'
+                                          data-muid='78df6416-f466-4127-9f33-9f2abe255705.1'
+                                        >
+                                          <tbody>
+                                            <tr>
+                                              <td
+                                                height='100%'
+                                                valign='top'
+                                                role='module-content'
+                                              >
+                                                <div
+                                                  align='center'
+                                                  class='report-section'
+                                                  style='margin-bottom: 24px'
+                                                >
+                                                  <div
+                                                    style='
+                                                      font-size: 12px;
+                                                      text-align: left;
+                                                      color: #6b7280;
+                                                      background: #f8f8f9;
+                                                      border-radius: 15px;
+                                                      padding: 8px 12px 0px 12px;
+                                                    '
+                                                  >
+                                                    <pre
+                                                      style='
+                                                        font-family: helvetica,
+                                                          sans-serif;
+                                                        white-space: pre-wrap;
+                                                        font-weight: 400;
+                                                        white-space: -moz-pre-wrap;
+                                                        white-space: -pre-wrap;
+                                                        white-space: -o-pre-wrap;
+                                                        word-wrap: break-word;
+                                                        line-height: 18px;
+                                                        font-size: 12px;
+                                                      '
+                                                    >This request is generated on <b>{{ date }}</b> from <b>{{ browser }} {{ version }}</b> with the IP address <b>{{ ip }}</b>. If this is not done by you, please <a href='mailto:hello@tor.us?subject=Did not sign up for Torus Account'>report it</a>  
+         </pre>
+                                                  </div>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <table
+                                          class='module'
+                                          role='module'
+                                          data-type='code'
+                                          border='0'
+                                          cellpadding='0'
+                                          cellspacing='0'
+                                          width='100%'
+                                          style='table-layout: fixed'
+                                          data-muid='ee2ffab3-72d0-4dff-826c-74157e174563'
+                                        >
+                                          <tbody>
+                                            <tr>
+                                              <td
+                                                height='100%'
+                                                valign='top'
+                                                role='module-content'
+                                              >
+                                                <div class='divider-section'>
+                                                  <hr
+                                                    style='
+                                                      border-top-color: #e2e2e2;
+                                                      border-left: 0px;
+                                                      border-right: 0px;
+                                                      border-style: inset;
+                                                      border-width: 0px;
+                                                      border-top-width: 1px;
+                                                    '
+                                                  />
+                                                </div>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <table
+                                          class='module'
+                                          role='module'
+                                          data-type='text'
+                                          border='0'
+                                          cellpadding='0'
+                                          cellspacing='0'
+                                          width='100%'
+                                          style='table-layout: fixed'
+                                          data-mc-module-version='2019-10-22'
+                                          data-muid='rUGVzY7LgXG9kSKfPmpDQR'
+                                        >
+                                          <tbody>
+                                            <tr>
+                                              <td
+                                                style='
+                                                  padding: 15px 0px 0px 0px;
+                                                  line-height: 18px;
+                                                  text-align: inherit;
+                                                '
+                                                height='100%'
+                                                valign='top'
+                                                bgcolor=''
+                                              >
+                                                <div>
+                                                  <div
+                                                    class='footer-section'
+                                                    style='
+                                                      font-family: inherit;
+                                                      text-align: left;
+                                                      class-name: footer-section;
+                                                    '
+                                                  >
+                                                    <span
+                                                      style='
+                                                        white-space: pre-wrap;
+                                                        font-size: 12px;
+                                                        color: #6b7280;
+                                                        font-family: helvetica,
+                                                          sans-serif;
+                                                        line-height: 18px;
+                                                      '
+                                                      >To manage your keys for this
+                                                      account, kindly login to </span
+                                                    ><a href='https://app.openlogin.com'
+                                                      ><span
+                                                        style='
+                                                          white-space: pre-wrap;
+                                                          font-size: 12px;
+                                                          color: #0364ff;
+                                                          font-family: helvetica,
+                                                            sans-serif;
+                                                          line-height: 18px;
+                                                        '
+                                                        >app.openlogin.com</span
+                                                      ></a
+                                                    ><span
+                                                      style='
+                                                        white-space: pre-wrap;
+                                                        font-size: 12px;
+                                                        color: #6b7280;
+                                                        font-family: helvetica,
+                                                          sans-serif;
+                                                        line-height: 18px;
+                                                      '
+                                                      >. The use of this service and
+                                                      website are subject to our </span
+                                                    ><a
+                                                      href='https://docs.web3auth.io/legal/terms-and-conditions'
+                                                      ><span
+                                                        style='
+                                                          white-space: pre-wrap;
+                                                          font-size: 12px;
+                                                          color: #0364ff;
+                                                          font-family: helvetica,
+                                                            sans-serif;
+                                                          line-height: 18px;
+                                                        '
+                                                        >Terms of Service</span
+                                                      ></a
+                                                    ><span
+                                                      style='
+                                                        white-space: pre-wrap;
+                                                        font-size: 12px;
+                                                        color: #6b7280;
+                                                        font-family: helvetica,
+                                                          sans-serif;
+                                                        line-height: 18px;
+                                                      '
+                                                    >
+                                                      and </span
+                                                    ><a
+                                                      href='https://docs.web3auth.io/legal/privacy-policy'
+                                                      ><span
+                                                        style='
+                                                          white-space: pre-wrap;
+                                                          font-size: 12px;
+                                                          color: #0364ff;
+                                                          font-family: helvetica,
+                                                            sans-serif;
+                                                          line-height: 18px;
+                                                        '
+                                                        >Privacy Statement</span
+                                                      ></a
+                                                    ><span
+                                                      style='
+                                                        white-space: pre-wrap;
+                                                        font-size: 12px;
+                                                        color: #6b7280;
+                                                        font-family: helvetica,
+                                                          sans-serif;
+                                                        line-height: 18px;
+                                                      '
+                                                      >.</span
+                                                    ><span
+                                                      style='
+                                                        font-size: 12px;
+                                                        color: #6b7280;
+                                                        font-family: helvetica,
+                                                          sans-serif;
+                                                        line-height: 18px;
+                                                      '
+                                                      ><br /> </span
+                                                    ><span
+                                                      style='
+                                                        display: block;
+                                                        margin-top: 12px;
+                                                        white-space: pre-wrap;
+                                                        font-size: 12px;
+                                                        color: #6b7280;
+                                                        font-family: helvetica,
+                                                          sans-serif;
+                                                        line-height: 18px;
+                                                      '
+                                                      >© 2023 Web3Auth. All rights
+                                                      reserved</span
+                                                    >
+                                                  </div>
+                                                  <div></div>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <table
+                                          class='module'
+                                          role='module'
+                                          data-type='divider'
+                                          border='0'
+                                          cellpadding='0'
+                                          cellspacing='0'
+                                          width='100%'
+                                          style='table-layout: fixed'
+                                          data-muid='0fbfb7ee-9aed-4a32-a7dc-865a75a72004'
+                                        >
+                                          <tbody>
+                                            <tr>
+                                              <td
+                                                style='padding: 0px 0px 0px 0px'
+                                                role='module-content'
+                                                height='100%'
+                                                valign='top'
+                                                bgcolor=''
+                                              >
+                                                <table
+                                                  border='0'
+                                                  cellpadding='0'
+                                                  cellspacing='0'
+                                                  align='center'
+                                                  width='100%'
+                                                  height='60px'
+                                                  style='
+                                                    line-height: 60px;
+                                                    font-size: 60px;
+                                                  '
+                                                >
+                                                  <tbody>
+                                                    <tr>
+                                                      <td
+                                                        style='
+                                                          padding: 0px 0px 60px 0px;
+                                                        '
+                                                        bgcolor='#ffffff'
+                                                      ></td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <table
+                                          class='module'
+                                          role='module'
+                                          data-type='divider'
+                                          border='0'
+                                          cellpadding='0'
+                                          cellspacing='0'
+                                          width='100%'
+                                          style='table-layout: fixed'
+                                          data-muid='ixz3BTmo4ueARwSzKcmNuh'
+                                        >
+                                          <tbody>
+                                            <tr>
+                                              <td
+                                                style='
+                                                  padding: 0px 0px 0px 0px;
+                                                  background-color: #e7edf3;
+                                                '
+                                                role='module-content'
+                                                height='100%'
+                                                valign='top'
+                                                bgcolor='#E7EDF3'
+                                              >
+                                                <table
+                                                  border='0'
+                                                  cellpadding='0'
+                                                  cellspacing='0'
+                                                  align='center'
+                                                  width='100%'
+                                                  height='20px'
+                                                  style='
+                                                    line-height: 20px;
+                                                    font-size: 20px;
+                                                  '
+                                                >
+                                                  <tbody>
+                                                    <tr>
+                                                      <td
+                                                        style='
+                                                          padding: 0px 0px 20px 0px;
+                                                        '
+                                                        bgcolor='#e7edf3'
+                                                      ></td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <!--[if mso]>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </center>
+                                    <![endif]-->
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </center>
+          </body>
+        </html>
+        `"
+    }
+}

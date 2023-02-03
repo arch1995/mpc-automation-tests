@@ -38,8 +38,11 @@ function Openlogin() {
       const url = new URL(window.location.href);
       const qNetwork = url.searchParams.get("network");
       const clientId =
+        // eslint-disable-next-line no-nested-ternary
         qNetwork === "cyan"
           ? "BILxiaDYbvlcwNdeJsyXEUDieKdYPIHfSdvEabzidwYZ3zaGsEN6noiM5u8f-5wuIksJcOn-Ga1LWNqen1eUZbw"
+          : qNetwork === "celeste"
+          ? "BCahPXvDs9JJcU_C4o7S8tOTc3TXxfclNerW889rIHu76Ryp1bLytvPlpn1fpxITHhE6zX4Xzh3Lez_z_S0STMg"
           : "BArfH9uaj2FI8qAjJY0gv98x8Li9RT6bLroh2abbLl5iVKDQu5BxNLVh8TgepA3p7MBTByhZL0ypJe1Citw4Hjs";
       const web3auth = new Web3AuthCore({
         chainConfig: {
@@ -66,6 +69,9 @@ function Openlogin() {
               clientId: "torus-key-test",
             },
           },
+        },
+        loginSettings: {
+          mfaLevel: "none",
         },
       });
       subscribeAuthEvents(web3auth);

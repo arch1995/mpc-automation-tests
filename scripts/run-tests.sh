@@ -1,3 +1,5 @@
+# Before running this script, install httpie for your device.
+
 # Instances IP, Region-IP addresses key pair.
 MUMBAI_IP=65.0.184.26
 SYDNEY_IP=3.26.117.51
@@ -7,7 +9,8 @@ BRAZIL_IP=18.231.195.96
 IRELAND_IP=34.241.62.34
 CAPETOWN_IP=13.244.110.176
 FRANKFURT_IP=18.192.116.174
-CANADA_IP=35.183.205.255
+CANADA_IP=35.183.205.
+SEOUL_IP=3.39.194.175
 
 # API variables
 

@@ -64,6 +64,9 @@ function OpenloginMPC() {
           },
           _iframeUrl: "https://mci-beta.openlogin.com",
         },
+        loginSettings: {
+          mfaLevel: "none",
+        },
       });
       subscribeAuthEvents(web3auth);
       web3auth.configureAdapter(adapter);

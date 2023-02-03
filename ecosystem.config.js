@@ -20,7 +20,7 @@ module.exports = {
       ref: "origin/main",
       repo: "https://github.com/arch1995/mpc-automation-tests.git",
       path: "/home/ubuntu/pm2-tests",
-      "pre-setup": ". /home/ubuntu/.nvm/nvm.sh && pm2 delete test-server",
+      "pre-setup": ". /home/ubuntu/.nvm/nvm.sh ",
       "post-setup":
         ". /home/ubuntu/.nvm/nvm.sh && npm install && npm run bootstrap && cd packages/express-server && touch .env && echo 'BASIC_AUTH_PASSWORD=aaddwedsdasd' > .env && echo APP_URL=https://bucolic-belekoy-37faa5.netlify.app >> .env && npm run build && pm2 start ./dist/index.js --name test-server",
       "post-deploy":
@@ -33,7 +33,7 @@ module.exports = {
       ref: "origin/main",
       repo: "https://github.com/arch1995/mpc-automation-tests.git",
       path: "/home/ubuntu/pm2-tests",
-      "pre-setup": ". /home/ubuntu/.nvm/nvm.sh && pm2 delete test-server",
+      "pre-setup": ". /home/ubuntu/.nvm/nvm.sh ",
       "post-setup":
         ". /home/ubuntu/.nvm/nvm.sh && npm install && npm run bootstrap && cd packages/express-server && touch .env && echo 'BASIC_AUTH_PASSWORD=aaddwedsdasd' > .env && echo APP_URL=https://bucolic-belekoy-37faa5.netlify.app >> .env && npm run build && pm2 start ./dist/index.js --name test-server",
       "post-deploy":
@@ -46,7 +46,7 @@ module.exports = {
       ref: "origin/main",
       repo: "https://github.com/arch1995/mpc-automation-tests.git",
       path: "/home/ubuntu/pm2-tests",
-      "pre-setup": ". /home/ubuntu/.nvm/nvm.sh && pm2 delete test-server",
+      "pre-setup": ". /home/ubuntu/.nvm/nvm.sh ",
       "post-setup":
         ". /home/ubuntu/.nvm/nvm.sh && npm install && npm run bootstrap && cd packages/express-server && touch .env && echo 'BASIC_AUTH_PASSWORD=aaddwedsdasd' > .env && echo APP_URL=https://bucolic-belekoy-37faa5.netlify.app >> .env && npm run build && pm2 start ./dist/index.js --name test-server",
       "post-deploy":
@@ -59,7 +59,7 @@ module.exports = {
       ref: "origin/main",
       repo: "https://github.com/arch1995/mpc-automation-tests.git",
       path: "/home/ubuntu/pm2-tests",
-      "pre-setup": ". /home/ubuntu/.nvm/nvm.sh && pm2 delete test-server",
+      "pre-setup": ". /home/ubuntu/.nvm/nvm.sh ",
       "post-setup":
         ". /home/ubuntu/.nvm/nvm.sh && npm install && npm run bootstrap && cd packages/express-server && touch .env && echo 'BASIC_AUTH_PASSWORD=aaddwedsdasd' > .env && echo APP_URL=https://bucolic-belekoy-37faa5.netlify.app >> .env && npm run build && pm2 start ./dist/index.js --name test-server",
       "post-deploy":
@@ -85,7 +85,7 @@ module.exports = {
       ref: "origin/main",
       repo: "https://github.com/arch1995/mpc-automation-tests.git",
       path: "/home/ubuntu/pm2-tests",
-      "pre-setup": ". /home/ubuntu/.nvm/nvm.sh && pm2 delete test-server",
+      "pre-setup": ". /home/ubuntu/.nvm/nvm.sh ",
       "post-setup":
         ". /home/ubuntu/.nvm/nvm.sh && npm install && npm run bootstrap && cd packages/express-server && touch .env && echo 'BASIC_AUTH_PASSWORD=aaddwedsdasd' > .env && echo APP_URL=https://bucolic-belekoy-37faa5.netlify.app >> .env && npm run build && pm2 start ./dist/index.js --name test-server",
       "post-deploy":
@@ -98,7 +98,7 @@ module.exports = {
       ref: "origin/main",
       repo: "https://github.com/arch1995/mpc-automation-tests.git",
       path: "/home/ubuntu/pm2-tests",
-      "pre-setup": ". /home/ubuntu/.nvm/nvm.sh && pm2 delete test-server",
+      "pre-setup": ". /home/ubuntu/.nvm/nvm.sh ",
       "post-setup":
         ". /home/ubuntu/.nvm/nvm.sh && npm install && npm run bootstrap && cd packages/express-server && touch .env && echo 'BASIC_AUTH_PASSWORD=aaddwedsdasd' > .env && echo APP_URL=https://bucolic-belekoy-37faa5.netlify.app >> .env && npm run build && pm2 start ./dist/index.js --name test-server",
       "post-deploy":
@@ -111,7 +111,20 @@ module.exports = {
       ref: "origin/main",
       repo: "https://github.com/arch1995/mpc-automation-tests.git",
       path: "/home/ubuntu/pm2-tests",
-      "pre-setup": ". /home/ubuntu/.nvm/nvm.sh && pm2 delete test-server",
+      "pre-setup": ". /home/ubuntu/.nvm/nvm.sh ",
+      "post-setup":
+        ". /home/ubuntu/.nvm/nvm.sh && npm install && npm run bootstrap && cd packages/express-server && touch .env && echo 'BASIC_AUTH_PASSWORD=aaddwedsdasd' > .env && echo APP_URL=https://bucolic-belekoy-37faa5.netlify.app >> .env && npm run build && pm2 start ./dist/index.js --name test-server",
+      "post-deploy":
+        ". /home/ubuntu/.nvm/nvm.sh && npm install && npm run bootstrap && cd packages/express-server && npm run build && pm2 reload test-server",
+    },
+    seoul: {
+      key: "~/Downloads/automation-test-seoul.pem",
+      user: "ubuntu",
+      host: ["3.39.194.175"],
+      ref: "origin/main",
+      repo: "https://github.com/arch1995/mpc-automation-tests.git",
+      path: "/home/ubuntu/pm2-tests",
+      "pre-setup": ". /home/ubuntu/.nvm/nvm.sh ",
       "post-setup":
         ". /home/ubuntu/.nvm/nvm.sh && npm install && npm run bootstrap && cd packages/express-server && touch .env && echo 'BASIC_AUTH_PASSWORD=aaddwedsdasd' > .env && echo APP_URL=https://bucolic-belekoy-37faa5.netlify.app >> .env && npm run build && pm2 start ./dist/index.js --name test-server",
       "post-deploy":
